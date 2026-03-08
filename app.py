@@ -23,7 +23,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- INITIALISATION ---
-FACES_DIR = "faces"
+# LA MODIFICATION EST ICI (Ligne 24) : Remplacer "faces" par "visage"
+FACES_DIR = "visage" 
 DB_FILE = "log_julien_scan.csv"
 
 if not os.path.exists(FACES_DIR):
@@ -33,7 +34,7 @@ if not os.path.exists(FACES_DIR):
 def load_known_faces():
     known_encodings = []
     known_names = []
-    # Scan du dossier faces pour charger les photos
+    # Scan du dossier visage (modifié ici aussi) pour charger les photos
     for filename in os.listdir(FACES_DIR):
         if filename.lower().endswith((".jpg", ".png", ".jpeg")):
             path = os.path.join(FACES_DIR, filename)
